@@ -40,8 +40,21 @@ function initMap() {
     
     var marker = new google.maps.Marker({position:{lat:45.33, lng:-91.49}, map:gMap});
     
+    google.maps.event.addListener(gMap, 'idle', function(){
+        updateGame()
+    });
 }
 
+function updateGame() {
+    console.log('function UpdateGame() google-maps-step-03');
+    var zoomLevel = gMap.getZoom()
+    var inBounds = false;
+
+    if (gMap.getBounds().contains({lat:45.33,lng:-91.49})){
+        inBounds = true;
+    }
+    console.log("inBounds:"+inBounds+"zoomLevel:"+zoomLevel);
+}
 
 function initApplication() {
     console.log('Map mania lite - starting');
