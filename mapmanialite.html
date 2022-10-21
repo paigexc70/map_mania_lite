@@ -28,7 +28,7 @@
     </style>
 </head>
 <body onload="initApplication()">
-    <h1>Map Mania Lite v1.3</h1>
+    <h1>Map Mania Lite v1.4</h1>
 
     <div id="myMapID"></div>
     <script>
@@ -37,6 +37,9 @@
 function initMap() {
     gMap = new google.maps.Map(document.getElementById('myMapID'), {
         center: {lat: 41.878, lng: 10}, zoom:3});
+    
+    var marker = new google.maps.Marker({position:{lat:45.33, lng:-91.49}, map:gMap});
+    
 }
 
 
