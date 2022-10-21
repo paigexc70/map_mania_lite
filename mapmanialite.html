@@ -31,9 +31,22 @@
     <h1>Map Mania Lite v1.3</h1>
 
     <div id="myMapID"></div>
+    <script>
+        var gMap;
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW5ZHV2_CpU8wlUasENXzokrGuTro_N9s&callback=initMap"
-        async defer>
+function initMap() {
+    gMap = new google.maps.Map(document.getElementById('myMapID'), {
+        center: {lat: 41.878, lng: 10}, zoom:3});
+}
+
+
+function initApplication() {
+    console.log('Map mania lite - starting');
+}
+    </script>
+
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCW5ZHV2_CpU8wlUasENXzokrGuTro_N9s&callback=initMap">
     </script>
 
     
